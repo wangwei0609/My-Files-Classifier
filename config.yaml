@@ -49,6 +49,12 @@ image_categories:
       - "肖像"
     description: "包含人物的图片"
 
+    # software类图片
+  software:
+    keywords:
+      - "software"
+    description: "包含软件的图片"
+
   # 默认分类（当无法识别时）
   unknown:
     keywords:
@@ -61,7 +67,7 @@ models:
   # OpenAI GPT-4 Vision
   openai:
     api_key: "${OPENAI_API_KEY}"
-    model: "gpt-4-vision-preview"
+    model: "gpt-4o"
     base_url: "https://api.openai.com/v1"
     max_tokens: 300
 
