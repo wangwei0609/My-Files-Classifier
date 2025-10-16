@@ -1,0 +1,95 @@
+# 图片分类配置文件
+image_categories:
+  # 猫咪类图片
+  cat:
+    keywords:
+      - "cat"
+      - "kitten"
+      - "feline"
+      - "猫"
+      - "小猫"
+      - "猫咪"
+    description: "包含猫的图片"
+
+  # 狗狗类图片
+  dog:
+    keywords:
+      - "dog"
+      - "puppy"
+      - "canine"
+      - "狗"
+      - "小狗"
+      - "狗狗"
+    description: "包含狗的图片"
+
+  # 风景类图片
+  landscape:
+    keywords:
+      - "landscape"
+      - "mountain"
+      - "forest"
+      - "nature"
+      - "scenery"
+      - "风景"
+      - "山"
+      - "森林"
+      - "自然"
+    description: "自然风景类图片"
+
+  # 人像类图片
+  portrait:
+    keywords:
+      - "person"
+      - "people"
+      - "human"
+      - "face"
+      - "portrait"
+      - "人"
+      - "人物"
+      - "肖像"
+    description: "包含人物的图片"
+
+  # 默认分类（当无法识别时）
+  unknown:
+    keywords:
+      - "unknown"
+      - "unrecognized"
+    description: "无法识别的图片"
+
+# 多模态大模型配置
+models:
+  # OpenAI GPT-4 Vision
+  openai:
+    api_key: "${OPENAI_API_KEY}"
+    model: "gpt-4-vision-preview"
+    base_url: "https://api.openai.com/v1"
+    max_tokens: 300
+
+  # Anthropic Claude
+  anthropic:
+    api_key: "${ANTHROPIC_API_KEY}"
+    model: "claude-3-sonnet-20240229"
+    max_tokens: 300
+
+  # Google Gemini
+  google:
+    api_key: "${GOOGLE_API_KEY}"
+    model: "gemini-2.0-flash-exp"
+    max_tokens: 300
+
+# 应用配置
+app:
+  # 默认使用的模型
+  default_model: "openai"
+
+  # 支持的图片格式
+  supported_formats:
+    - "jpg"
+    - "jpeg"
+    - "png"
+    - "gif"
+    - "bmp"
+    - "webp"
+
+  # 最大文件大小 (MB)
+  max_file_size: 10
